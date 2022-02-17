@@ -3,75 +3,95 @@
     margin: 0;
     box-sizing: border-box;
 }
+  
+img { max-width: 100%; }
+  
+/* Override default gridlex hiccups */ 
+  [class*=col] { padding: 0; }
+  [class*=grid-], [class*=grid_], [class~=grid] { margin: 0; }
 
 :root {
     --main-color: #5171fd;
-  }
-
-img { max-width: 100%; }
-
-/* Gridlex reset */
-[class*=grid-], [class*=grid_], [class~=grid] {
-    margin: 0;
 }
 
+/* Padding Utility Classes */ 
+.padded-sm { padding: 2.5%; }
+.padded    { padding: 5%;   }
+.padded-lg { padding: 10%;  }
 
-/* Re-usable Utiity Classes  */
-.tall-50 { min-height: 50vh; }
-.tall-60 { min-height: 60vh; }
-.tall-70 { min-height: 70vh; }
-.tall-80 { min-height: 80vh; }
-.tall-90 { min-height: 90vh; }
+.padded-05 { padding: 0.5rem; }
+.padded-1  { padding: 1rem; }
+.padded-2  { padding: 2rem; }
 
-.padded    { padding: 5%; }
+.padded-t  { padding-top: 5%; }
+.padded-b  { padding-bottom: 5%; }
+.padded-l  { padding-left: 5%; }
+.padded-r  { padding-right: 5%; }
 
-.padded-1,
-.grid.padded-1 { padding: 1rem; }
+.padded-tb { padding-top: 5%; padding-bottom: 5%; }
+.padded-lr { padding-left: 5%; padding-right: 5%; }
 
-.padded-2,
-.grid.padded-2 { padding: 2rem; }
+.padded-t-1 { padding-top: 1rem; }
+.padded-b-1 { padding-bottom: 1rem; }
+.padded-l-1 { padding-left: 1rem; }
+.padded-r-1 { padding-right: 1rem; }
 
-.margin-b-0 { margin-bottom: 0; }
+.padded-t-2 { padding-top: 2rem; }
+.padded-b-2 { padding-bottom: 2rem; }
+.padded-l-2 { padding-left: 2rem; }
+.padded-r-2 { padding-right: 2rem; }
+
+.padded-t-0 { padding-top: 0; }
+.padded-b-0 { padding-bottom: 0; }
+.padded-l-0 { padding-left: 0; }
+.padded-r-0 { padding-right: 0; }
+
+/* Margin Utility Classes */ 
+.margin-t { margin-top: 5%; }
+.margin-b { margin-bottom: 5%; }
+.margin-l { margin-left: 5%; }
+.margin-r { margin-right: 5%; }
+
+.margin-t-1 { margin-top: 1rem; }
 .margin-b-1 { margin-bottom: 1rem; }
+.margin-l-1 { margin-left: 1rem; }
+.margin-r-1 { margin-right: 1rem; }
+
+.margin-t-2 { margin-top: 2rem; }
+.margin-b-2 { margin-bottom: 2rem; }
+.margin-l-2 { margin-left: 2rem; }
+.margin-r-2 { margin-right: 2rem; }
 
 .margin-t-0 { margin-top: 0; }
-.margin-t-1 { margin-top: 1rem; }
+.margin-b-0 { margin-bottom: 0; }
+.margin-l-0 { margin-left: 0; }
+.margin-r-0 { margin-right: 0; }
 
-.bg-light    { background-color: #f8f6f4; }
-.bg-featured { background-color: #018ca2; }
+.margin-tb { margin-top: 5%; margin-bottom: 5%; }
+.margin-lr { margin-left: 5%; margin-right: 5%; }
 
-.text-featured { color: var(--main-color); }
-.text-white { color: #fff; }
+/* Text Alignment Utility Classes */
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
 
-.left   { text-align: left; }
-.center { text-align: center; }
-.right  { text-align: right; }
-
-
-/* General typography & universal styles  */
-body { 
-    font-family: 'Fraunces', serif;
+/* Typography styles */
+body {
+    font-family: "Fraunces", serif;
     color: rgb(80, 80, 80);
     font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
+h2, h3, h4, h5, h6 {
+    line-height: 1.1;
     margin-bottom: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1px;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
-
-p, ul, li, a { font-size: 1.1rem; }
+p, a, ul, li { font-size: 1.1rem; }
 
 p {
     line-height: 1.4; 
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 ul {
@@ -84,25 +104,36 @@ li {
     margin-bottom: .25rem;
 }
 
-h1:last-child, 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 h2:last-child, 
 h3:last-child, 
 h4:last-child, 
 h5:last-child, 
 h6:last-child, 
 p:last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
+.shadow {
+    text-shadow:  1px 3px rgba(0,0,0,0.25);
+}
+
+.text-md { font-size: 2.5rem; }
 .text-lg { font-size: 3.5rem; }
 .text-xl { font-size: 4.5rem; }
-.text-xxl { font-size: 8.5rem; }
-.text-bold { font-weight: 700; }
+.text-xxl { font-size: 7.5rem; }
+.text-review { font-size: 2rem; }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+.text-bold { font-weight: 700; }
+.text-regular { font-weight: 400; }
+
+.text-featured { color: var(--main-color); }
+.text-dark { color: #343434; }
+.text-light { color: #f8f6f4; }
 
 /* Button */
 .button {
@@ -111,7 +142,6 @@ a {
     font-weight: 400;
     border: 1px solid var(--main-color);
     border-radius: 2rem;
-    text-decoration: none;
     padding: 1rem 2rem;
     margin: 0.75rem 0;
 }
@@ -169,28 +199,55 @@ form button:hover {
 }
 
 /* Header & Footer */
-
 footer {
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     color: rgb(125,120,120);
 }
 
-/* Images & Background Images */
-
+/* Background Image Utility Class */
 .bg-image {
+    background-color: grey; /* Set a fall-back color while images are loading */ 
     background-size: cover;
     background-position: center; 
-    background-color: #f3f4f5;
+    background-repeat: no-repeat;
 }
+  
+/* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
+.landscape     { padding-bottom: 66%;  }
+.portrait-tall { padding-bottom: 175%; }
+.portrait      { padding-bottom: 125%; }
+.square        { padding-bottom: 100%; }
 
-.bg-hero { background-image: url('/images/white-water-rafting-ubud-hero-muted.jpg'); }
+/* Minimal Height Utility Classes */
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+  
+/* Background Position Utility Classes*/
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
+
+/* Images & Background Images */
+.bg-dark { 
+    background-color: rgb(60,60,65); 
+    color: #fff;
+}
+  
+.bg-featured { background-color: #018ca2; }
+.bg-light { background-color: #f8f6f4; }
+
+.bg-hero { background-image: url('/images/white-water-rafting-ubud-hero.jpg'); }
 
 .bg-leaves { 
-    background-image: url('/images/zen-studio-1.jpg');
-    background-position: 50% 31%;
+        background-image: url('/images/stone.png');
+        background-position: 50% 55%;
 }
 
-.bg-venue { background-image: url('/images/zen-studio-3.jpg'); }
+.bg-venue { background-image: url('/images/ayung-river-rafting-action-2.jpg'); }
 .bg-map { background-image: url('/images/light-colored-map.png'); } 
 
 .shape-teardrop {
@@ -203,35 +260,69 @@ footer {
     border-top-right-radius: 20rem; 
 }
 
-/* Gridlex SM query - Max 768px - _sm-* */
+
+/* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
+.show-xs,
+.show-sm,
+.show-md {
+    display: none;
+}
+
+/* ------- MD Media Query (64em / 1024px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+@media (max-width: 64em) {
+    .show-md { display: block; }
+    .hide-md { display: none;  }
+}
+
+/* ------- SM Media Query (48em / 768px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */ 
 @media (max-width: 48em) {
-    .text-xxl { font-size: 6.5rem; }
-    .text-xl { font-size: 3.5rem; }
+    .show-sm { display: block; }
+    .hide-sm { display: none;  }
+        
+    .sm-text-center { text-align: center; }
+    .sm-text-left { text-align: left; }
+    .sm-text-right { text-align: right; }
+
+    .sm-padded { padding: 5%; }
+    .sm-padded-1 { padding: 1rem; }
+    .sm-padded-05 { padding: 0.5rem; }
+
+    .sm-padded-t-0 { padding-top: 0; }
+    .sm-padded-b-0 { padding-bottom: 0; }
+    .sm-padded-l-0 { padding-left: 0; }
+    .sm-padded-r-0 { padding-right: 0; }
     
-    .sm-block { display: block; }
+    .sm-margin-t-0 { margin-top: 0; }
+    .sm-margin-b-0 { margin-bottom: 0; }
+    .sm-margin-l-0 { margin-left: 0; }
+    .sm-margin-r-0 { margin-right: 0; }
 
-    .bg-leaves { background-image: url('/images/leaves-light.png'); }
-
-    .text-center-sm { text-align: center; }
-
-    .padded-b-0-sm,
-    .grid.padded-b-0-sm { padding-bottom: 0; }
-
-    .margin-b-0-sm { margin-bottom: 0; }
-    .margin-b-1-sm { margin-bottom: 1rem; }
-
-    .margin-t-0-sm { margin-top: 0; }
-    .margin-t-1-sm { margin-top: 1rem; }
-}	
-
-/* Gridlex XS media query - Max 576px - _xs-* */
-@media (max-width: 36em) {
+    .text-md { font-size: 2rem; }
+    .text-lg { font-size: 3rem; }
     .text-xl { font-size: 3.5rem; }
-    .text-lg { font-size: 4rem; }
-    .text-xxl { font-size: 5.5rem; }
-}	
+    .text-xxl { font-size: 6.5rem; }
+    .text-review { font-size: 1.5rem; }
 
-/* Custom XXS media query - Max 400px - _xs-* */
-@media (max-width: 25em) {
-    .text-xxl { font-size: 3.5rem; }
-}	
+    /* Custom style on SM size */
+    .bg-leaves { background-image: url('/images/leaves-light.png'); }
+    p, a, ul, li { font-size: 1rem; }
+    li { margin-bottom: .4rem; }
+}
+
+/* ------- XS Media Query (36em / 576px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+@media (max-width: 36em) {
+    .show-xs { display: block; }
+    .hide-xs { display: none;  }
+
+    .text-md { font-size: 1.5rem; }
+    .text-lg { font-size: 2.5rem; }
+    .text-xl { font-size: 3rem; }
+    .text-xxl { font-size: 5.5rem; }
+    .text-review { font-size: 1.25rem; }
+
+    /* Custom style on XS size */
+    p, a, ul, li { font-size: .95rem; }
+}
