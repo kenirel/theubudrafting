@@ -82,7 +82,7 @@ body {
     font-weight: 300;
 }
 
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     margin-bottom: 1.5rem;
 }
@@ -179,6 +179,10 @@ form label {
   font-weight: 700;
 }
 
+form label:first-child {
+    margin-top: 0;
+}
+
 form button {
     display: inline-block;
     color: var(--main-color);
@@ -240,7 +244,12 @@ footer {
 .bg-featured { background-color: #018ca2; }
 .bg-light { background-color: #f8f6f4; }
 
-.bg-hero { background-image: url('/images/white-water-rafting-ubud-hero.jpg'); }
+.bg-hero {
+    /* background-image: linear-gradient( 358.7deg,  rgba(42,136,157,.15) 1.7%, rgba(122,197,214,.5) 51.1%, rgba(211,232,242,.15) 95.5% ), url('/images/white-water-rafting-ubud-hero-blur.jpg'); */
+    background-image: url('/images/white-water-rafting-ubud-hero-blur.jpg');
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem; 
+}
 
 .bg-leaves { 
         background-image: url('/images/stone.png');
@@ -293,6 +302,11 @@ footer {
     .sm-padded-b-0 { padding-bottom: 0; }
     .sm-padded-l-0 { padding-left: 0; }
     .sm-padded-r-0 { padding-right: 0; }
+
+    .sm-padded-t-1 { padding-top: 1rem; }
+    .sm-padded-b-1 { padding-bottom: 1rem; }
+    .sm-padded-l-1 { padding-left: 1rem; }
+    .sm-padded-r-1 { padding-right: 1rem; }
     
     .sm-margin-t-0 { margin-top: 0; }
     .sm-margin-b-0 { margin-bottom: 0; }
